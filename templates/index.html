@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Processing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <div class="container mx-auto px-20 py-10 space-y-5">
+      <h1 class="text-2xl text-center font-bold text-indigo-600">
+        Procesamiento de imágenes
+      </h1>
+      <form
+        method="post"
+        action="/upload"
+        enctype="multipart/form-data"
+        class="flex justify-center"
+      >
+        <input type="file" name="file" autocomplete="off" required />
+        <button
+          class="text-white bg-blue-400 py-1 px-4 rounded-xl hover:bg-blue-500"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uploaded image</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{url_for('static', filename='utilities.js')}}"></script>
+  </head>
+  <body>
+    <div class="container mx-auto px-20 py-10 space-y-5">
+      <h1 class="text-2xl text-center font-bold text-green-400">
+        Imagen Original subida exitosamente
+      </h1>
+      {%if filename %}
+      <div class="flex items-center justify-center gap-4">
+        <img
+          class="w-96"
+          src="{{ url_for('display_image', filename=filename) }}"
+          alt="{{filename}}"
+        />
+        <button
+          onclick="histogramRaw('{{filename}}','UPLOAD_FOLDER')"
+          class="bg-indigo-500 text-white px-2 rounded-xl py-1"
+        >
+          Calcular histograma
+        </button>
+        <a href="{{ url_for('equalized',filename=filename) }}">
+          Ecualizar Imagen
+        </a>
+      </div>
+      {% endif %}
+      <div class="flex flex-row w-full">
+        <div class="w-1/3">
+          <canvas class="w-full" id="redChannel"></canvas>
+        </div>
+        <div class="w-1/3">
+          <canvas class="w-full" id="greenChannel"></canvas>
+        </div>
+        <div class="w-1/3">
+          <canvas class="w-full" id="blueChannel"></canvas>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
