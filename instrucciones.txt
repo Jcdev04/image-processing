@@ -1,0 +1,8 @@
+1. Descargar python 3.12.3
+2. Abrir la consola cona la ruta de este proyecto
+3. Ejecutar los siguientes comandos:
+    3.1. python -m venv .venv
+    3.2. .venv/Scripts/activate
+    3.3. flask run
+4. Una vez ejecutado los comandos de arriba, abrir el navegador y pegar el siguiente link http://127.0.0.1:5000
+5. Usar el programa
