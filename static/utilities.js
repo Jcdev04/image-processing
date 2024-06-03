@@ -6,7 +6,7 @@ function histogramRaw(filename, folder) {
       const redChannel = document.getElementById("redChannel");
       const greenChannel = document.getElementById("greenChannel");
       const blueChannel = document.getElementById("blueChannel");
-
+      console.log(data.Blue);
       createChart(
         redChannel,
         data.intensity,
