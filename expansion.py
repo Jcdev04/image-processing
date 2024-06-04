@@ -18,7 +18,7 @@ def expand_histogram(channel, matriz):
     print(X2)
     # Si X1=0 y X2=255, no se necesita expandir el histograma
     if(X1==0 and X2==255):
-        return channel
+        return matriz
     print("Pasaste la prueba, estimado")
     m = 255/(X2-X1)
     b = X1-(m*X2)
